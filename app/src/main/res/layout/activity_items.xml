@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/Widget.Material3.Button.IconButton"
-        app:icon="@drawable/delete_24px"
+        app:icon="@drawable/test_pic"
         app:layout_constraintEnd_toStartOf="@+id/back"
         app:layout_constraintStart_toEndOf="@+id/til"
         app:layout_constraintTop_toTopOf="parent"
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/Widget.Material3.Button.IconButton"
-        app:icon="@drawable/arrow_back_24px"
+        app:icon="@drawable/test_pic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/delete"
         app:layout_constraintTop_toTopOf="parent"/>

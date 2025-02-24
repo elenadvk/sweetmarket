@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         val userEmail: EditText = findViewById(R.id.user_email)
         val userPass: EditText = findViewById(R.id.user_pass)
         val button: Button = findViewById(R.id.button_reg)
+
         //переменная, отвечающая за переход между окнами авторизации и регистрации
         val linkToAuth: TextView = findViewById(R.id.link_to_auth)
 

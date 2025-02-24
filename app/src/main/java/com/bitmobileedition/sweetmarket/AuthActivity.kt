@@ -16,6 +16,7 @@ class AuthActivity : AppCompatActivity() {
         val userLogin: EditText = findViewById(R.id.user_login_auth)
         val userPass: EditText = findViewById(R.id.user_pass_auth)
         val button: Button = findViewById(R.id.button_auth)
+
         //переменная, отвечающая за переход между окнами авторизации и регистрации
         val linkToReg: TextView = findViewById(R.id.link_to_reg)
 
@@ -37,7 +38,7 @@ class AuthActivity : AppCompatActivity() {
                 val db = DbHelper(this, null)
                 val isAuth = db.getUser(login, pass)
 
-                if(isAuth){
+                if (isAuth){
                     Toast.makeText(this, "Пользователь $login авторизован", Toast.LENGTH_LONG).show()
                     userLogin.text.clear()
                     userPass.text.clear()
