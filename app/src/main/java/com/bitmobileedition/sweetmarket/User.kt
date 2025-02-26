@@ -1,8 +1,8 @@
 package com.bitmobileedition.sweetmarket
 
 class User(
-    val login: String,
-    val email: String,
-    val pass: String) {
+    val buyer_login: String,
+    val buyer_email: String,
+    val buyer_password: String) {
 
 }

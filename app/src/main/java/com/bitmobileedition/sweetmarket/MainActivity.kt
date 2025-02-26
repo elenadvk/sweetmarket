@@ -9,6 +9,8 @@ import android.widget.TextView
 import android.widget.Toast
 
 
+
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val userLogin: EditText = findViewById(R.id.user_login)
         val userEmail: EditText = findViewById(R.id.user_email)
         val userPass: EditText = findViewById(R.id.user_pass)
+
         val button: Button = findViewById(R.id.button_reg)
 
         //переменная, отвечающая за переход между окнами авторизации и регистрации
@@ -31,18 +34,18 @@ class MainActivity : AppCompatActivity() {
 
 
         button.setOnClickListener {
-            val login = userLogin.text.toString().trim() //получение текста от пользователя при нажатии на кнопку (trim() - удаление пробелов)
-            val email = userEmail.text.toString().trim()
-            val pass = userPass.text.toString().trim()
+            val buyer_login = userLogin.text.toString().trim() //получение текста от пользователя при нажатии на кнопку (trim() - удаление пробелов)
+            val buyer_email = userEmail.text.toString().trim()
+            val buyer_password = userPass.text.toString().trim()
 
-            if (login == "" || email == "" || pass == "")
+            if (buyer_login == "" || buyer_email == "" || buyer_password == "")
                 Toast.makeText(this, "Не все поля заполнены", Toast.LENGTH_LONG).show() //всплывающая подсказка (LENGTH_LONG - насколько длинная подсказка)
             else{
-                val user = User(login, email, pass)
+                val user = User(buyer_login, buyer_email, buyer_password)
 
                 val db = DbHelper(this, null)
                 db.addUser(user)
-                Toast.makeText(this, "Пользователь $login добавлен", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Пользователь $buyer_login добавлен", Toast.LENGTH_LONG).show()
 
                 userLogin.text.clear()
                 userEmail.text.clear()

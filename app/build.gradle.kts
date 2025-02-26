@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.21"
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.10"
 }
 
 android {
@@ -50,7 +50,8 @@ dependencies {
     implementation(libs.converter.scalars)  // If you're using the scalar converter
     implementation(libs.retrofit.v290)  // Retrofit dependency
     implementation(libs.retrofit2.kotlinx.serialization.converter)
-    implementation(libs.glide.v4151)  // Add Glide
+    implementation(libs.glide.v4151)
+    implementation(libs.androidx.room.ktx)  // Add Glide
     annotationProcessor(libs.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

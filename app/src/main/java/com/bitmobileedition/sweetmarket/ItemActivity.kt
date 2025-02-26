@@ -17,8 +17,7 @@ class ItemActivity : AppCompatActivity() {
         val imageView: ImageView = findViewById(R.id.item_list_image)
 
         title.text = intent.getStringExtra("itemTitle")
-        Glide.with(this).load("http://127.0.0.1:8080/${intent.getStringExtra("itemImage")}").into(imageView)
-//        Glide.with(this).load("http://84.246.85.148:8080/${intent.getStringExtra("itemImage")}").into(imageView)
+        Glide.with(this).load("http://84.246.85.148:8080/${intent.getStringExtra("itemImage")}").into(imageView)
         text.text = intent.getStringExtra("itemText")
 
     }

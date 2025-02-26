@@ -1,5 +1,6 @@
 package com.bitmobileedition.sweetmarket
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -45,6 +46,7 @@ class ItemsAdapter(var items: List<Item>, var context: Context, val onClick: (St
     }
 
     //обращаемся к найденным элементам и подставляем
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.title.text = items[position].title
         holder.desc.text = items[position].desc
